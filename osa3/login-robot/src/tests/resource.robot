@@ -1,5 +1,6 @@
 *** Settings ***
 Library  ../AppLibrary.py
+Test Setup  Input New Command
 
 *** Keywords ***
 Input Login Command
@@ -10,3 +11,6 @@ Input Credentials
     Input  ${username}
     Input  ${password}
     Run Application
+
+Input New Command
+    Input  new
