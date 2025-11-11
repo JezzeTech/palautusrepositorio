@@ -11,3 +11,12 @@ Login With Correct Credentials
 Create User And Input Login Command
     Create User  kalle  kalle123
     Input Login Command
+
+*** Test Cases ***
+Login With Incorrect Password
+    Input Credentials  kalle  kalle222
+    Output Should Contain  Invalid username or password
+
+Login With Nonexistent Username
+    Input Credentials  aku  ankka1
+    Output Should Contain  Invalid username or password
